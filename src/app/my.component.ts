@@ -7,8 +7,23 @@ import { Student } from './student';
 })
 export class MyComponent {
     // message: string = 'This is some message';
-    me: Student = {
+    group: Student[] = [{
         name: 'Anduin',
         age: 20
-    };
+    },
+    {
+        name: 'Yolo',
+        age: 21
+    },
+    {
+        name: 'Lily',
+        age: 22
+    }];
+
+    public addStudent(name: string, age: number) {
+        this.group.push({
+            name: name,
+            age: age
+        });
+    }
 }

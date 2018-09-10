@@ -1,3 +1,7 @@
-<p>{{me.name | uppercase }}</p>
-
-<input [(ngModel)]="me.name">
+<label *ngFor="let student of group">
+    <p>
+        {{student.name}} is {{student.age}} years old!
+    </p>
+</label>
+<input type="text" #newStudentName />
+<button (click)="addStudent(newStudentName.value , 30)">Add</button>
