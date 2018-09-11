@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Student } from './student';
+import { Student } from '../student';
 
 @Component({
     selector: 'app-message',
@@ -21,9 +21,10 @@ export class MyComponent {
     }];
 
     public addStudent(name: string, age: number) {
+        const me = 10 / 3;
         this.group.push({
             name: name,
-            age: age
+            age: me
         });
     }
 }
