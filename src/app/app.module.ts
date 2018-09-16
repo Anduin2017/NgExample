@@ -6,6 +6,8 @@ import { MyComponent } from './my/my.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavComponent } from './nav/nav.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ApiSerivice } from './apiservice';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,12 @@ import { NavComponent } from './nav/nav.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ApiSerivice
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

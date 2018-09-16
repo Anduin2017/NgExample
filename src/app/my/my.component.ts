@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { Student } from '../student';
+import { ApiSerivice } from '../apiservice';
 
 @Component({
     selector: 'app-message',
     templateUrl: './my.component.html'
 })
 export class MyComponent {
+    constructor(private api: ApiSerivice) {
+
+    }
     // message: string = 'This is some message';
     group: Student[] = [{
         name: 'Anduin',
